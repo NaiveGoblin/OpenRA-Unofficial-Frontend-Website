@@ -1,1 +1,344 @@
-<h1>OpenRA</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://www.openra.net/images/news/20161223-new-logo.png" type="image/x-icon" />
+    <meta charset="utf-8">
+    <title>OpenRA</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+
+
+    <style>
+        .video-slide {
+          height: 100vh;
+          object-fit: cover;
+        }
+
+        .slide-caption {
+          position: fixed;
+          width: 100%;
+          text-align: center;
+          top: 25vh;
+          font-family: "Boldonse", system-ui;
+          font-weight: 400;
+          font-style: normal;
+
+          font-size: 65px;
+        }
+
+        .caption-red {
+          color: red;
+        }
+
+        .caption-yellow {
+          color: yellow;
+        }
+
+        .caption-gold {
+          color: gold;
+        }
+
+
+        .button-82-pushable {
+          position: relative;
+          border: none;
+          background: transparent;
+          padding: 0;
+          cursor: pointer;
+          outline-offset: 4px;
+          transition: filter 250ms;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+
+        .button-82-shadow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: rgba(0, 0, 0, 0.25);
+          will-change: transform;
+          transform: translateY(2px);
+          transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+        }
+
+        .button-82-edge {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          background: linear-gradient(
+            to left,
+            #991a1a 0%,
+            #dc2525 8%,
+            #dc2525 92%,
+            #991a1a 100%
+          );
+        }
+
+        .button-82-front {
+          display: block;
+          position: relative;
+          padding: 12px 27px;
+          border-radius: 12px;
+          font-size: 1.1rem;
+          color: white;
+          background: #dc2525;
+          will-change: transform;
+          transform: translateY(-4px);
+          transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+        }
+
+        @media (min-width: 768px) {
+          .button-82-front {
+            font-size: 1.25rem;
+            padding: 12px 42px;
+          }
+        }
+
+        .button-82-pushable:hover {
+          filter: brightness(110%);
+          -webkit-filter: brightness(110%);
+        }
+
+        .button-82-pushable:hover .button-82-front {
+          transform: translateY(-6px);
+          transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+        }
+
+        .button-82-pushable:active .button-82-front {
+          transform: translateY(-2px);
+          transition: transform 34ms;
+        }
+
+        .button-82-pushable:hover .button-82-shadow {
+          transform: translateY(4px);
+          transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+        }
+
+        .button-82-pushable:active .button-82-shadow {
+          transform: translateY(1px);
+          transition: transform 34ms;
+        }
+
+        .button-82-pushable:focus:not(:focus-visible) {
+          outline: none;
+        }
+
+    </style>
+  </head>
+  <body style="background-color: #1f1f1f;">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark rounded my-4 mx-auto w-75" style="background-color: #252525;">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="https://www.openra.net/images/openra-logo-with-text.svg" style="height: 40px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Download</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Games</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Forum</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Background VideoPlayer -->
+    <div class="w-100 position-fixed top-0" style="z-index: -1;">
+      <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <video class="d-block w-100 video-slide" autoplay loop muted>
+              <source src="https://www.openra.net/videos/red-alert-sizzle.webm" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <video class="d-block w-100 video-slide" autoplay loop muted>
+              <source src="https://www.openra.net/videos/command-and-conquer-sizzle.webm" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <video class="d-block w-100 video-slide" autoplay loop muted>
+              <source src="https://www.openra.net/videos/dune-2000-sizzle.webm" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Title Space -->
+    <div class="w-100" style="height: 15vh;"></div>
+
+    <!-- Download Button VideoPlayer -->
+    <section class="py-4">
+      <h1 class="p-5 text-center text-light">Red Alert, Command & Conquer & Dune 2000</h1>
+      <h2 class="p-5 text-center text-light" style="font-family: 'Boldonse', system-ui; font-weight: 400; font-style: normal; font-size: 30px;">
+        Rebuilt for the Modern Era.
+      </h2>
+
+      <button class="button-82-pushable mx-auto mt-3 mb-5 d-block" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">Download Now</span>
+      </button>
+    </section>
+
+
+    <!-- Download Title Space -->
+    <div class="w-100" style="height: 15vh;"></div>
+    <div class="w-100" style="height: 5vh; background-color: #252525"></div>
+
+    <!-- About Section -->
+    <section class="text-light pb-5" style="background-color: #252525">
+    <div class="container text-center py-5">
+      <h3>What is OpenRA?</h3>
+      <p>OpenRA is an open source project that recreates and modernizes classic real time strategy games, like Red Alert, Command & Conquer, and Dune 2000.</p>
+    </div>
+    <div class="container d-flex flex-column flex-sm-row gap-5">
+      <div class="flex-fill pt-4">
+        <p>We’ve developed a flexible game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games.</p>
+        <p>The OpenRA engine is not restricted by the technical limitations of the original games. It includes native support for modern operating systems (like Windows 10, macOS, and Linux) and screen resolutions without relying on emulation or hacks, and integrated online multiplayer.</p>
+        <p class="text-danger">EA has not endorsed and does not support this product.</p>
+      </div>
+    </div>
+      <div class="ratio ratio-16x9 w-25 mx-auto mt-5">
+        <iframe src="https://www.youtube.com/embed/93b7TKooj-M?si=KZhbf_CBuvsKfsg3" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+  </section>
+
+    <!-- 2 Lists Section -->
+      <section class="text-light py-5" style="background-color: #252525">
+      <div class="container d-flex flex-column flex-md-row gap-4">
+        <div class="flex-fill text-center">
+          <h4>Built for Modern Expectations</h4>
+          <ul class="list-unstyled mt-3">
+            <li>✅ Updated gameplay with modern features</li>
+            <li>✅ Online play with mod and map support</li>
+            <li>✅ Updated campaigns with new objectives</li>
+            <li>✅ Native support on Windows, macOS, and Linux</li>
+          </ul>
+        </div>
+        <div class="flex-fill text-center">
+          <h4>Made Better By The Community</h4>
+          <ul class="list-unstyled mt-3">
+            <li>🌐 Fully open-source with community input</li>
+            <li>🌐 User-created and curated maps</li>
+            <li>🌐 Includes a Mod SDK</li>
+            <li>🌐 Community events and tournaments</li>
+          </ul>
+        </div>
+      </div>
+      </section>
+
+      <!-- Space -->
+      <div class="w-100" style="height: 2vh; background-color: rgb(31 ,31 ,31, 95%)"></div>
+
+      <!-- Numbers Section -->
+      <section class="text-light py-5" style=" background-color: rgb(31 ,31 ,31, 95%)">
+        <div class="container text-center mb-4">
+          <h3>Join us on GitHub</h3>
+        </div>
+        <div class="container d-flex flex-column flex-md-row gap-4 text-center">
+          <div class="flex-fill">
+            <h4>Downloads</h4>
+            <p>randomnumber</p>
+          </div>
+          <div class="flex-fill">
+            <h4>Github Stars</h4>
+            <p>randomnumber</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Space -->
+      <div class="w-100" style="height: 2vh; background-color: rgb(31 ,31 ,31, 95%)"></div>
+
+    <!-- Gallery-->
+    <section class="w-100" style="background-color: #252525">
+      <div class="container mx-auto pt-5">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card shadow-sm">
+                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 1">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card shadow-sm">
+                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 2">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card shadow-sm">
+                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 3">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card shadow-sm">
+                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 4">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card shadow-sm">
+                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 5">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card shadow-sm">
+                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 6">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Socials -->
+    <!-- Social Icons -->
+    <section class="text-center py-5" style="background-color: #252525">
+      <h3 class="text-light text-center pt-5">Where to Find us:</h3>
+      <div class="container d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+      </div>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
