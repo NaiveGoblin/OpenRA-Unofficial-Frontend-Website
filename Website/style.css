@@ -1,0 +1,191 @@
+    *{
+      box-sizing: border-box;
+    }
+
+    a{
+      text-decoration: none !important;
+    }
+
+    .video-slide {
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .title {
+      font-family: "Press Start 2P", system-ui;
+      font-weight: 400;
+      font-style: normal;
+
+      font-size: 35px;
+    }
+
+    .title-3{
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 32px;
+    }
+
+    .title-4{
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 25px;
+    }
+
+    li{
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 17px;
+
+      padding-top: 15px;
+      list-style-position: outside !important;
+      list-style: circle !important;
+    }
+
+    .caption-red {
+      color: red;
+    }
+
+    .caption-yellow {
+      color: yellow;
+    }
+
+    .caption-gold {
+      color: gold;
+    }
+
+
+    .button-82-pushable {
+      position: relative;
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+      outline-offset: 4px;
+      transition: filter 250ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button-82-shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.25);
+      will-change: transform;
+      transform: translateY(2px);
+      transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+    }
+
+    .button-82-edge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: linear-gradient(
+        to left,
+        #991a1a 0%,
+        #dc2525 8%,
+        #dc2525 92%,
+        #991a1a 100%
+      );
+    }
+
+    .button-82-front {
+      display: block;
+      position: relative;
+      padding: 12px 27px;
+      border-radius: 12px;
+      font-family: "Press Start 2P", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      color: white;
+      background: #dc2525;
+      will-change: transform;
+      transform: translateY(-4px);
+      transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+    }
+
+    @media (min-width: 768px) {
+      .button-82-front {
+        font-size: 1.25rem;
+        padding: 12px 42px;
+      }
+    }
+
+    .button-82-pushable:hover {
+      filter: brightness(110%);
+      -webkit-filter: brightness(110%);
+    }
+
+    .button-82-pushable:hover .button-82-front {
+      transform: translateY(-6px);
+      transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .button-82-pushable:active .button-82-front {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+
+    .button-82-pushable:hover .button-82-shadow {
+      transform: translateY(4px);
+      transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .button-82-pushable:active .button-82-shadow {
+      transform: translateY(1px);
+      transition: transform 34ms;
+    }
+
+    .button-82-pushable:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    .scroll-down {
+      position: absolute;
+      left: 50%;
+      display: block;
+      text-align: center;
+      z-index: 100;
+      text-decoration: none;
+      text-shadow: 0;
+      width: 25px;
+      height: 25px;
+      border-bottom: 3px solid #fff;
+      border-right: 3px solid #fff;
+      z-index: 9;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0%) rotate(45deg);
+      -moz-transform: translate(-50%, 0%) rotate(45deg);
+      transform: translate(-50%, 0%) rotate(45deg);
+      -webkit-animation: fade_move_down 4s ease-in-out infinite;
+      -moz-animation:    fade_move_down 4s ease-in-out infinite;
+      animation:         fade_move_down 4s ease-in-out infinite;
+    }
+
+
+    /*animated scroll arrow animation*/
+    @-webkit-keyframes fade_move_down {
+      0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+      50%  { opacity: 1;  }
+      100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    }
+    @-moz-keyframes fade_move_down {
+      0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+      50%  { opacity: 1;  }
+      100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    }
+    @keyframes fade_move_down {
+      0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+      50%  { opacity: 1;  }
+      100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    }

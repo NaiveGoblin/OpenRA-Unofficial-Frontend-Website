@@ -3,142 +3,18 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://www.openra.net/images/news/20161223-new-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-    <title>OpenRA</title>
+    <title>OpenRA - Home</title>
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
-
-
-    <style>
-        .video-slide {
-          height: 100vh;
-          object-fit: cover;
-        }
-
-        .slide-caption {
-          position: fixed;
-          width: 100%;
-          text-align: center;
-          top: 25vh;
-          font-family: "Boldonse", system-ui;
-          font-weight: 400;
-          font-style: normal;
-
-          font-size: 65px;
-        }
-
-        .caption-red {
-          color: red;
-        }
-
-        .caption-yellow {
-          color: yellow;
-        }
-
-        .caption-gold {
-          color: gold;
-        }
-
-
-        .button-82-pushable {
-          position: relative;
-          border: none;
-          background: transparent;
-          padding: 0;
-          cursor: pointer;
-          outline-offset: 4px;
-          transition: filter 250ms;
-          user-select: none;
-          -webkit-user-select: none;
-          touch-action: manipulation;
-        }
-
-        .button-82-shadow {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 12px;
-          background: rgba(0, 0, 0, 0.25);
-          will-change: transform;
-          transform: translateY(2px);
-          transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
-        }
-
-        .button-82-edge {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 12px;
-          background: linear-gradient(
-            to left,
-            #991a1a 0%,
-            #dc2525 8%,
-            #dc2525 92%,
-            #991a1a 100%
-          );
-        }
-
-        .button-82-front {
-          display: block;
-          position: relative;
-          padding: 12px 27px;
-          border-radius: 12px;
-          font-size: 1.1rem;
-          color: white;
-          background: #dc2525;
-          will-change: transform;
-          transform: translateY(-4px);
-          transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
-        }
-
-        @media (min-width: 768px) {
-          .button-82-front {
-            font-size: 1.25rem;
-            padding: 12px 42px;
-          }
-        }
-
-        .button-82-pushable:hover {
-          filter: brightness(110%);
-          -webkit-filter: brightness(110%);
-        }
-
-        .button-82-pushable:hover .button-82-front {
-          transform: translateY(-6px);
-          transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
-        }
-
-        .button-82-pushable:active .button-82-front {
-          transform: translateY(-2px);
-          transition: transform 34ms;
-        }
-
-        .button-82-pushable:hover .button-82-shadow {
-          transform: translateY(4px);
-          transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
-        }
-
-        .button-82-pushable:active .button-82-shadow {
-          transform: translateY(1px);
-          transition: transform 34ms;
-        }
-
-        .button-82-pushable:focus:not(:focus-visible) {
-          outline: none;
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
-  <body style="background-color: #1f1f1f;">
+  <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark rounded my-4 mx-auto w-75" style="background-color: #252525;">
@@ -153,20 +29,17 @@
 
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto text-center">
-            <li class="nav-item"><a href="#" class="nav-link">News</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Download</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Games</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Forum</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="download.html" class="nav-link">Download</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Hero Background VideoPlayer -->
-    <div class="w-100 position-fixed top-0" style="z-index: -1;">
+    <div style="z-index: -1; width: 100vw; height: 100vh; background-color: rgba(65, 65, 65, 0.54); position: fixed; top: 0;"></div>
+    <div class="w-100 position-fixed top-0" style="z-index: -2;">
       <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-inner">
 
@@ -201,48 +74,49 @@
     <!-- Download Title Space -->
     <div class="w-100" style="height: 15vh;"></div>
 
+
+
     <!-- Download Button VideoPlayer -->
-    <section class="py-4">
-      <h1 class="p-5 text-center text-light">Red Alert, Command & Conquer & Dune 2000</h1>
-      <h2 class="p-5 text-center text-light" style="font-family: 'Boldonse', system-ui; font-weight: 400; font-style: normal; font-size: 30px;">
+    <section class="py-4 w-75 mx-auto">
+      <h1 class="p-5 text-center text-light title"><span style="color: red;">Red Alert, </span><span style="color: yellow;">Command & Conquer </span><span style="color: gold;">& Dune 2000</span></h1>
+      <h2 class="p-5 text-center text-light title">
         Rebuilt for the Modern Era.
       </h2>
 
-      <button class="button-82-pushable mx-auto mt-3 mb-5 d-block" role="button">
-        <span class="button-82-shadow"></span>
-        <span class="button-82-edge"></span>
-        <span class="button-82-front text">Download Now</span>
-      </button>
+      <a href="download.html"><button class="button-82-pushable mx-auto mt-3 mb-5 d-block">
+          <span class="button-82-shadow"></span>
+          <span class="button-82-edge"></span>
+          <span class="button-82-front text">Download Now</span>
+        </button></a>
+      <div class="scroll-down"></div>
     </section>
 
 
     <!-- Download Title Space -->
-    <div class="w-100" style="height: 15vh;"></div>
-    <div class="w-100" style="height: 5vh; background-color: #252525"></div>
+    <div class="w-75 mx-auto" style="height: 15vh;"></div>
+    <div class="w-75 mx-auto rounded-top" style="height: 2vh; background-color: #252525"></div>
 
     <!-- About Section -->
-    <section class="text-light pb-5" style="background-color: #252525">
-    <div class="container text-center py-5">
-      <h3>What is OpenRA?</h3>
+    <section class="text-light pb-5 w-75 mx-auto" style="background-color: #252525">
+    <div class="container text-left py-5 w-75">
+      <p class="mb-5 text-center title-3">What is OpenRA?</p>
       <p>OpenRA is an open source project that recreates and modernizes classic real time strategy games, like Red Alert, Command & Conquer, and Dune 2000.</p>
-    </div>
-    <div class="container d-flex flex-column flex-sm-row gap-5">
-      <div class="flex-fill pt-4">
-        <p>We’ve developed a flexible game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games.</p>
-        <p>The OpenRA engine is not restricted by the technical limitations of the original games. It includes native support for modern operating systems (like Windows 10, macOS, and Linux) and screen resolutions without relying on emulation or hacks, and integrated online multiplayer.</p>
-        <p class="text-danger">EA has not endorsed and does not support this product.</p>
-      </div>
-    </div>
-      <div class="ratio ratio-16x9 w-25 mx-auto mt-5">
-        <iframe src="https://www.youtube.com/embed/93b7TKooj-M?si=KZhbf_CBuvsKfsg3" title="YouTube video player" allowfullscreen></iframe>
+      <p>We’ve developed a flexible game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games.</p>
+      <p>The OpenRA engine is not restricted by the technical limitations of the original games. It includes native support for modern operating systems (like Windows 10, macOS, and Linux) and screen resolutions without relying on emulation or hacks, and integrated online multiplayer.</p>
+      <p style="color: #F82323;">EA has not endorsed and does not support this product.</p>
+
+      <div class="w-100" style="height: 8vh;"></div>
+
+      <div class="ratio ratio-16x9 w-100 mx-auto">
+        <iframe class="rounded" src="https://www.youtube.com/embed/93b7TKooj-M?si=KZhbf_CBuvsKfsg3" title="YouTube video player" allowfullscreen></iframe>
       </div>
   </section>
 
     <!-- 2 Lists Section -->
-      <section class="text-light py-5" style="background-color: #252525">
-      <div class="container d-flex flex-column flex-md-row gap-4">
-        <div class="flex-fill text-center">
-          <h4>Built for Modern Expectations</h4>
+    <section class="text-light w-75 mx-auto pb-4" style="background-color: #252525">
+      <div class="container d-flex flex-column flex-lg-row gap-4 w-75">
+        <div class="flex-fill text-left title-4">
+          <p class="title-3">Built for Modern Expectations</p>
           <ul class="list-unstyled mt-3">
             <li>✅ Updated gameplay with modern features</li>
             <li>✅ Online play with mod and map support</li>
@@ -250,8 +124,8 @@
             <li>✅ Native support on Windows, macOS, and Linux</li>
           </ul>
         </div>
-        <div class="flex-fill text-center">
-          <h4>Made Better By The Community</h4>
+        <div class="flex-fill text-left">
+          <p class="title-3">Made Better By The Community</p>
           <ul class="list-unstyled mt-3">
             <li>🌐 Fully open-source with community input</li>
             <li>🌐 User-created and curated maps</li>
@@ -260,82 +134,25 @@
           </ul>
         </div>
       </div>
-      </section>
-
-      <!-- Space -->
-      <div class="w-100" style="height: 2vh; background-color: rgb(31 ,31 ,31, 95%)"></div>
-
-      <!-- Numbers Section -->
-      <section class="text-light py-5" style=" background-color: rgb(31 ,31 ,31, 95%)">
-        <div class="container text-center mb-4">
-          <h3>Join us on GitHub</h3>
-        </div>
-        <div class="container d-flex flex-column flex-md-row gap-4 text-center">
-          <div class="flex-fill">
-            <h4>Downloads</h4>
-            <p>randomnumber</p>
-          </div>
-          <div class="flex-fill">
-            <h4>Github Stars</h4>
-            <p>randomnumber</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Space -->
-      <div class="w-100" style="height: 2vh; background-color: rgb(31 ,31 ,31, 95%)"></div>
-
-    <!-- Gallery-->
-    <section class="w-100" style="background-color: #252525">
-      <div class="container mx-auto pt-5">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm">
-                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 1">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm">
-                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 2">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm">
-                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 3">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm">
-                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 4">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm">
-                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 5">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card shadow-sm">
-                    <img src="https://images.pexels.com/photos/30877151/pexels-photo-30877151.jpeg" class="img-fluid rounded" alt="Deskripsi Gambar 6">
-                </div>
-            </div>
-        </div>
-    </div>
     </section>
+
+      <!-- Space -->
+      <div class="w-75  w-75 mx-auto" style="height: 12vh; background-color: rgb(31 ,31 ,31, 95%)"></div>
+
 
     <!-- Socials -->
     <!-- Social Icons -->
-    <section class="text-center py-5" style="background-color: #252525">
-      <h3 class="text-light text-center pt-5">Where to Find us:</h3>
+    <section class="text-center py-5  w-75 mx-auto rounded-bottom mb-5 p-5" style="background-color: #252525">
+      <p class="text-light text-center pt-3 pb-3 title-3">Where to Find us:</p>
       <div class="container d-flex flex-wrap justify-content-center gap-3">
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
-        <a href="#" class="d-block" style="width: 75px; height: 75px; background-color: blue;"><img src="#" class="w-100 h-100" alt="social"></a>
+        <a target="_blank" href="https://github.com/OpenRA/OpenRA" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=F82323" class="w-100 h-100"></a>
+        <a target="_blank" href="https://discord.openra.net/" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=30888&format=png&color=F82323" class="w-100 h-100"></a>
+        <a target="_blank" href="https://openra.itch.io/openra" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=zfuVDK4SdKFq&format=png&color=F82323" class="w-100 h-100"></a>
+        <a target="_blank" href="https://www.facebook.com/openra" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=F82323" class="w-100 h-100"></a>
+        <a target="_blank" href="https://twitter.com/openRA" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=8824&format=png&color=F82323" class="w-100 h-100"></a>
+        <a target="_blank" href="https://www.reddit.com/r/openra" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=12518&format=png&color=F82323" class="w-100 h-100"></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCRoiPL1J4K1-EhQeNazrYig" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=37326&format=png&color=F82323" class="w-100 h-100"></a>
+        <a target="_blank" href="https://steamcommunity.com/groups/openra/" class="d-block" style="width: 75px; height: 75px;"><img src="https://img.icons8.com/?size=100&id=87503&format=png&color=F82323" class="w-100 h-100"></a>
       </div>
     </section>
 
