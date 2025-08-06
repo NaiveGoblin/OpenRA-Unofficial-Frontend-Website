@@ -11,12 +11,16 @@
       object-fit: cover;
     }
 
+
     .title {
       font-family: "Press Start 2P", system-ui;
       font-weight: 400;
       font-style: normal;
 
       font-size: 35px;
+    }
+
+    .break_all{
       word-break: break-all;
     }
 
