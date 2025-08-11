@@ -1,4 +1,15 @@
-    *{
+
+ @media (max-width: 800px) {
+  .w-size {
+    width: 100vw !important;
+  }
+}
+
+  .w-size{
+    width: 75%;
+  }
+
+ *{
       box-sizing: border-box;
     }
 
